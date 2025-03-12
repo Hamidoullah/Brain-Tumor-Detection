@@ -1,0 +1,146 @@
+body {
+    background-color: #f8f9fa;
+    font-family: 'Rubik', sans-serif;
+}
+.main-container {
+    margin: 50px auto;
+    max-width: 1200px;
+    background-color: #ffffff;
+    border-radius: 15px;
+    box-shadow: 0px 4px 6px rgba(0.2, 0.2, 0.2, 0.2);
+    overflow: hidden;
+}
+
+.left-section {
+    background-color: #34495e; 
+    color: #eee;
+    padding: 30px;
+    text-align: center;
+}
+
+.left-section h2 {
+    font-size: 28px;
+    margin-bottom: 20px;
+}
+.justify-text {
+    text-align: justify;
+}
+
+.left-section img {
+    width: 100px;
+    height: 100px;
+    border-radius: 100%;
+    margin-bottom: 20px;
+}
+
+.left-section p {
+    font-size: 16px;
+    line-height: 1.6;
+}
+
+.right-section {
+    padding: 30px;
+}
+
+.upload-section {
+    margin: 50px auto;
+    padding: 30px;
+    background-color: #ffffff;
+    border-radius: 15px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    max-width: 500px;
+    text-align: center;
+}
+
+
+/* Style global du formulaire */
+#upload-file {
+    max-width: 500px; /* Largeur maximale pour centrer */
+    margin: 0 auto; /* Centrer le formulaire */
+    padding: 20px;
+    background-color: #f9f9f9; /* Fond clair */
+    border-radius: 15px; /* Bords arrondis */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Ombre pour effet de profondeur */
+}
+
+/* Style pour le champ de fichier */
+#imageUpload {
+    background-color: #fff; /* Fond blanc */
+    border: 1px solid #ced4da; /* Bordure discrète */
+    padding: 15px;
+    font-size: 16px;
+    color: #6c757d;
+    border-radius: 20px; /* Bords arrondis */
+    transition: border-color 0.3s; /* Animation pour bordure */
+}
+
+/* Ajout de l'animation sur survol du champ de fichier */
+#imageUpload:hover {
+    border-color: #28a745; /* Bordure verte sur survol */
+}
+
+/* Style du bouton d'upload */
+.btn-custom {
+    font-size: 18px;
+    padding: 12px;
+    border-radius: 20px; /* Bords arrondis du bouton */
+    border: none;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+/* Effet d'animation au survol du bouton */
+.btn-custom:hover {
+    transform: scale(1.05); /* Agrandissement léger */
+}
+
+/* Style pour le bouton lorsque l'image est uploadée avec succès */
+#upload-file.success .btn-custom {
+    background-color: #17a2b8;
+    color: #fff;
+}
+
+
+
+
+.image-preview {
+    border: 2px dashed #6c757d;
+    border-radius: 10px;
+    padding: 20px;
+    margin: 20px 0;
+    background-color: #f1f1f1;
+    text-align: center;
+}
+
+
+.loader {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.loader div {
+    width: 30px;
+    height: 30px;
+    margin: 5px;
+    background-color: #17a2b8;
+    border-radius: 50%;
+    animation: bounce 1.2s infinite;
+}
+
+.loader div:nth-child(2) {
+    animation-delay: -0.4s;
+}
+
+.loader div:nth-child(3) {
+    animation-delay: -0.2s;
+}
+
+@keyframes bounce {
+    0%, 80%, 100% {
+        transform: scale(0);
+    }
+    40% {
+        transform: scale(1);
+    }
+}

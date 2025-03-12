@@ -1,0 +1,54 @@
+{% extends "import.html" %} 
+{% block content %}
+
+<div class="main-container row">
+    <div class="col-md-6 left-section">
+        <img src="static\images\brain.jpg" alt="Sensibilisation Image">
+        <h2>L'importance de la détection des tumeurs cérébrales</h2>
+        <p class="justify-text">
+            La détection précoce des tumeurs cérébrales est essentielle pour améliorer les chances de traitement
+            réussi et sauver des vies. Des technologies comme l'apprentissage profond offrent une aide précieuse
+            aux professionnels de santé en augmentant la précision des diagnostics.
+        </p>
+        <p class="justify-text">
+            Cependant, il est crucial de souligner que des erreurs dans la classification peuvent avoir des conséquences graves,
+            notamment le risque de sous-diagnostiquer ou de mal diagnostiquer une condition critique. 
+        </p>
+        <p class="justify-text">
+            Ensemble, nous pouvons renforcer l'efficacité des outils médicaux pour offrir des soins meilleurs et plus rapides 
+            à ceux qui en ont le plus besoin.
+        </p>
+    </div>
+
+    <div class="col-md-6 right-section">
+        <h2 class="text-primary text-center mb-4">Classification des tumeurs cérébrales</h2>
+        <form id="upload-file" method="post" enctype="multipart/form-data" class="mb-4">
+            <!-- Champ d'upload d'image -->
+            <input type="file" name="file" class="form-control mb-3" id="imageUpload" accept=".png, .jpg, .jpeg" 
+                   style="border-radius: 20px; padding: 10px; background-color: #f8f9fa;">
+            
+            <!-- Bouton d'upload avec bordure et animation -->
+            <button type="button" class="btn btn-success btn-custom w-100">Téléverser une image</button>
+        </form>
+        
+
+        <div class="image-section" style="display:none;">
+            <div class="image-preview">
+                <img id="imagePreview" class="img-fluid" src="#" alt="Preview">
+            </div>
+            <button type="button" class="btn btn-info btn-lg btn-custom w-100" id="btn-predict">Prédire!</button>
+        </div>
+
+        <div class="loader" style="display:none;">
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+
+        <h3 id="result" class="mt-4 text-success text-center">
+            <span></span>
+        </h3>
+    </div>
+</div>
+
+{% endblock %}
